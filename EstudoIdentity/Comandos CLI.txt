@@ -1,0 +1,54 @@
+/*
+--ASP.NET CodeGenerator
+
+//Usado para gerar o código do Identity (login, CRUD do login etc.)
+dotnet tool install -g dotnet-aspnet-codegenerator
+
+//Pacote para visualizar o código gerado
+dotnet add package Microsoft.VisualStudio.Web.Codegeneration.Design
+
+dotnet restore
+
+//Lista quais arquivos podemos gerar no Identity
+dotnet aspnet-codegenerator identity --listFiles
+
+Resultado:
+Building project ...
+Finding the generator 'identity'...
+Running the generator 'identity'...
+File List:
+Account.AccessDenied
+Account.ConfirmEmail
+Account.ExternalLogin
+Account.ForgotPassword
+Account.ForgotPasswordConfirmation
+Account.Lockout
+Account.Login
+Account.LoginWith2fa
+Account.LoginWithRecoveryCode
+Account.Logout
+Account.Manage._Layout
+Account.Manage._ManageNav
+Account.Manage._StatusMessage
+Account.Manage.ChangePassword
+Account.Manage.DeletePersonalData
+Account.Manage.Disable2fa
+Account.Manage.DownloadPersonalData
+Account.Manage.EnableAuthenticator
+Account.Manage.ExternalLogins
+Account.Manage.GenerateRecoveryCodes
+Account.Manage.Index
+Account.Manage.PersonalData
+Account.Manage.ResetAuthenticator
+Account.Manage.SetPassword
+Account.Manage.TwoFactorAuthentication
+Account.Register
+Account.ResetPassword
+Account.ResetPasswordConfirmation
+RunTime 00:00:05.22
+
+
+//No exemplo abaixo será gerada a tela Register do usuário na aplicação
+dotnet aspnet-codegenerator identity -dc Identity.Data.ApplicationDbContext --files Account.Register
+
+*/
